@@ -27,11 +27,11 @@ trackBtn.addEventListener("click", () => {
         return;
     }
 
-    // SHOW LOADER FOR 2 SECONDS
-    loader.classList.remove("hide");
+    /* SHOW LOADER FOR 2 SECONDS */
+    loader.classList.add("show");
 
     setTimeout(() => {
-        loader.classList.add("hide");
+        loader.classList.remove("show");
         statusContainer.style.display = "block";
     }, 2000);
 });
