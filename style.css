@@ -20,17 +20,6 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* SEARCH */
-.search-bar {
-    width: 320px;
-    height: 38px;
-    padding: 0 14px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    font-size: 14px;
-}
-
 /* RIGHT SIDE */
 .nav-right {
     display: flex;
