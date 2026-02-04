@@ -1,51 +1,71 @@
-.track-title {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.track-box {
-    max-width: 400px;
-    margin: 30px auto;
+.track-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    margin-top: 60px;
 }
 
-.track-box input {
-    padding: 10px;
+/* CARD */
+.track-card {
+    width: 360px;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #fff;
+}
+
+.track-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.track-card input {
+    padding: 12px;
     font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-.track-box button {
-    padding: 10px;
+.track-card button {
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-/* ERROR */
+.track-card button:hover {
+    opacity: 0.9;
+}
+
 .track-error {
     color: red;
     text-align: center;
+    font-size: 13px;
 }
 
-/* STATUS FLOW */
+/* STATUS */
 .status-container {
     display: none;
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
 }
 
 .status-step {
     font-size: 16px;
-    color: #999;
+    color: #aaa;
 }
 
 .status-arrow {
     font-size: 22px;
-    color: #999;
     margin: 6px 0;
+    color: #aaa;
 }
 
-/* COMPLETED STEPS */
 .completed {
     color: green;
     font-weight: 600;
