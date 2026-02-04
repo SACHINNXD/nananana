@@ -25,37 +25,21 @@ body {
     cursor: pointer;
 }
 
-/* CUSTOM SEARCH ICON */
-.search-icon {
-    width: 28px;
-    height: 28px;
-    position: relative;
+/* SEARCH BUTTON */
+.search-btn {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 6px;
 }
 
-/* LENS */
-.lens {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* HANDLE */
-.handle {
-    width: 10px;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    bottom: 4px;
-    right: 0;
-    transform: rotate(45deg);
-    transform-origin: left center;
+/* SVG ICON */
+.search-svg {
+    width: 22px;
+    height: 22px;
+    stroke: #000;
+    stroke-width: 2;
+    fill: none;
 }
 
 /* SEARCH OVERLAY */
@@ -90,7 +74,7 @@ body {
     outline: none;
 }
 
-/* CLOSE */
+/* CLOSE BUTTON */
 .close-search {
     background: none;
     border: none;
