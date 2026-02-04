@@ -2,48 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Track Order</title>
+    <title>Track Orders</title>
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cookies.css" />
     <link rel="stylesheet" href="track.css" />
 </head>
 <body>
 
-<h1 class="track-title">Track Your Order</h1>
-
-<div class="track-box">
-    <input
-        type="text"
-        id="contactInput"
-        placeholder="Enter Mobile Number or Email ID"
-    />
-
-    <input
-        type="text"
-        id="orderInput"
-        placeholder="Enter Your Order ID"
-    />
-
-    <button id="trackBtn">Track</button>
+<!-- ===================== FAKE PAGE LOADER ===================== -->
+<div class="fake-loader" id="fakeLoader">
+    <div class="loader-box">
+        <div class="loader-ring"></div>
+        <span class="loader-text">Loading</span>
+    </div>
 </div>
 
-<p class="track-error" id="trackError"></p>
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="logo.png" class="logo" alt="Logo">
+        </a>
+    </div>
 
-<!-- ORDER STATUS -->
-<div class="status-container" id="statusContainer">
-    <div class="status-step completed">Order Placed</div>
-    <div class="status-arrow completed">↓</div>
+    <div class="nav-center">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="track.html" class="nav-link">Track Orders</a>
+        <a href="terms.html" class="nav-link">Terms & Condition</a>
+    </div>
 
-    <div class="status-step completed">Order Packed</div>
-    <div class="status-arrow">↓</div>
+    <div class="nav-right">
+        <button class="icon-btn" id="openSearch">🔍</button>
+    </div>
+</nav>
 
-    <div class="status-step">Order Dispatched</div>
-    <div class="status-arrow">↓</div>
+<!-- ===================== TRACK SECTION ===================== -->
+<main class="track-wrapper">
 
-    <div class="status-step">Order On Way</div>
-    <div class="status-arrow">↓</div>
+    <div class="track-card">
+        <h2>Track Your Order</h2>
 
-    <div class="status-step">Order Delivered</div>
-</div>
+        <input
+            type="text"
+            id="contactInput"
+            placeholder="Mobile Number or Email ID"
+        />
+
+        <input
+            type="text"
+            id="orderInput"
+            placeholder="Order ID"
+        />
+
+        <button id="trackBtn">Track Order</button>
+
+        <p class="track-error" id="trackError"></p>
+    </div>
+
+    <!-- STATUS FLOW -->
+    <div class="status-container" id="statusContainer">
+        <div class="status-step completed">Order Placed</div>
+        <div class="status-arrow completed">↓</div>
+
+        <div class="status-step completed">Order Packed</div>
+        <div class="status-arrow">↓</div>
+
+        <div class="status-step">Order Dispatched</div>
+        <div class="status-arrow">↓</div>
+
+        <div class="status-step">Order On Way</div>
+        <div class="status-arrow">↓</div>
+
+        <div class="status-step">Order Delivered</div>
+    </div>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <span class="footer-center">© Team CR7 , All Rights Reserved</span>
+        <span class="footer-right">Powered By TeamCR7</span>
+    </div>
+</footer>
 
 <script src="tracker-data.js"></script>
 <script src="track.js"></script>
