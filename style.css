@@ -6,8 +6,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* BODY LAYOUT (STICKY FOOTER FIX) */
 body {
     background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===================== NAVBAR ===================== */
@@ -18,7 +22,6 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
-    position: relative;
     z-index: 100;
 }
 
@@ -28,14 +31,13 @@ body {
     cursor: pointer;
 }
 
-/* RIGHT ICON GROUP */
+/* RIGHT ICONS */
 .nav-right {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-/* ICON BUTTONS */
 .icon-btn {
     background: none;
     border: none;
@@ -43,7 +45,6 @@ body {
     padding: 6px;
 }
 
-/* SVG ICONS */
 .icon-svg {
     width: 22px;
     height: 22px;
@@ -80,7 +81,6 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    outline: none;
 }
 
 .close-search {
@@ -90,7 +90,7 @@ body {
     cursor: pointer;
 }
 
-/* ===================== MODAL BASE ===================== */
+/* ===================== MODALS ===================== */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -106,7 +106,7 @@ body {
 }
 
 .modal-box {
-    background: #ffffff;
+    background: #fff;
     width: 420px;
     max-width: 90%;
     padding: 24px;
@@ -118,8 +118,8 @@ body {
     position: absolute;
     top: 12px;
     right: 12px;
-    background: none;
     border: none;
+    background: none;
     font-size: 20px;
     cursor: pointer;
 }
@@ -133,18 +133,16 @@ body {
     width: 32px;
     height: 32px;
     border: 1px solid #ccc;
-    background: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
+    background: #fff;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-/* DROPDOWN */
 .currency-dropdown {
     position: absolute;
     top: 40px;
     right: 0;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ccc;
     border-radius: 6px;
     display: none;
@@ -154,9 +152,8 @@ body {
 
 .currency-dropdown button {
     padding: 8px;
-    font-size: 16px;
-    border: none;
     background: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -170,29 +167,34 @@ body {
 
 /* ===================== FOOTER ===================== */
 .site-footer {
-    margin-top: 60px;
+    margin-top: auto;
     padding-bottom: 20px;
 }
 
-/* BLACK LINE */
 .footer-line {
     height: 1px;
     background: #000;
     width: 100%;
 }
 
-/* FOOTER TEXT */
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px 0 20px;
-    font-size: 14px;
-    color: #000;
+    position: relative;
+    padding: 12px 20px 0;
+    height: 32px;
 }
 
-/* RIGHT TEXT (TRANSLUCENT) */
+/* CENTER TEXT */
+.footer-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+/* RIGHT TEXT */
 .footer-right {
+    position: absolute;
+    right: 20px;
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.45);
+    color: rgba(0,0,0,0.45);
 }
