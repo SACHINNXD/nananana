@@ -31,14 +31,22 @@ body {
     font-size: 14px;
 }
 
-/* RIGHT ICONS */
+/* RIGHT SIDE */
 .nav-right {
     display: flex;
+    align-items: center;
     gap: 18px;
 }
 
+/* ICONS */
 .nav-icon {
     width: 26px;
     height: 26px;
+    cursor: pointer;
+}
+
+/* LOGO */
+.logo {
+    height: 32px;
     cursor: pointer;
 }
