@@ -79,5 +79,58 @@
     <script src="wishlist.js"></script>
     <script src="cart.js"></script>
 
+    <!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+    <p>
+        We use cookies to enhance your browsing experience, serve personalized
+        content, and analyze our traffic. By clicking “Accept & Proceed”, you
+        consent to our use of cookies.
+    </p>
+
+    <div class="cookie-actions">
+        <button class="cookie-btn primary" id="acceptCookies">
+            Accept & Proceed
+        </button>
+        <button class="cookie-btn" id="rejectCookies">
+            Reject
+        </button>
+        <button class="cookie-btn" id="manageCookies">
+            Manage Cookies
+        </button>
+    </div>
+</div>
+
+<!-- COOKIE MANAGE MODAL -->
+<div class="modal-overlay" id="cookieModal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeCookieModal">✕</button>
+        <h2>Manage Cookie Preferences</h2>
+
+        <div class="cookie-options">
+            <label>
+                <input type="checkbox" checked disabled />
+                Necessary Cookies (required)
+            </label>
+
+            <label>
+                <input type="checkbox" id="analyticsCookies" />
+                Analytics Cookies
+            </label>
+
+            <label>
+                <input type="checkbox" id="marketingCookies" />
+                Marketing Cookies
+            </label>
+        </div>
+
+        <button class="cookie-btn primary" id="saveCookies">
+            Save & Accept
+        </button>
+    </div>
+</div>
+
+<!-- COOKIE SCRIPT -->
+<script src="cookies.js"></script>
+
 </body>
 </html>
