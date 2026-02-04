@@ -224,15 +224,19 @@ body {
     color: rgba(0,0,0,0.45);
 }
 
-/* ===================== FAKE LOADER ===================== */
+/* ===================== FAKE LOADER (FIXED) ===================== */
 .fake-loader {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.55);
-    display: flex;
+    display: none; /* ✅ hidden by default */
     align-items: center;
     justify-content: center;
     z-index: 10000;
+}
+
+.fake-loader.show {
+    display: flex;
 }
 
 .loader-box {
@@ -260,11 +264,5 @@ body {
 
 @keyframes spin {
     from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.fake-loader.hide {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
+    to   { transform: rotate(360deg); }
 }
