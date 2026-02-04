@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Access</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .admin-card {
+            width: 360px;
+            padding: 32px;
+            background: #111;
+            border-radius: 14px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        .admin-card h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .admin-card input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* OTP BOXES */
+        .otp-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .otp-box {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 22px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .admin-card button {
+            width: 100%;
+            padding: 12px;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .admin-card button:hover {
+            opacity: 0.9;
+        }
+
+        .error {
+            color: #ff4d4d;
+            text-align: center;
+            margin-top: 14px;
+            font-size: 13px;
+        }
+
+        .success {
+            color: #4dff88;
+            text-align: center;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="admin-card">
+    <h2>ADMIN LOGIN</h2>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Admin Email"
+    />
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+    />
+
+    <!-- 4 DIGIT PIN -->
+    <div class="otp-container">
+        <input maxlength="1" class="otp-box" />
+        <input maxlength="1" class="otp-box" />
+        <input maxlength="1" class="otp-box" />
+        <input maxlength="1" class="otp-box" />
+    </div>
+
+    <button id="loginBtn">Login</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+    /* ====== ADMIN CREDENTIALS (DEMO ONLY) ====== */
+    const ADMIN_EMAIL = "Sachinrkumar1000@gmail.com";
+    const ADMIN_PASSWORD = "admin@2026";
+    const ADMIN_PIN = "6767";
+
+    const otpInputs = document.querySelectorAll(".otp-box");
+    const loginBtn = document.getElementById("loginBtn");
+    const message = document.getElementById("message");
+
+    /* AUTO MOVE OTP */
+    otpInputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+            if (input.value && index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+            }
+        });
+    });
+
+    loginBtn.addEventListener("click", () => {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const pin = Array.from(otpInputs).map(i => i.value).join("");
+
+        message.textContent = "";
+        message.className = "";
+
+        if (!email || !password || pin.length !== 4) {
+            message.textContent = "All fields are required.";
+            message.className = "error";
+            return;
+        }
+
+        if (
+            email === ADMIN_EMAIL &&
+            password === ADMIN_PASSWORD &&
+            pin === ADMIN_PIN
+        ) {
+            message.textContent = "Access Granted";
+            message.className = "success";
+
+            setTimeout(() => {
+                // later this will redirect to admin dashboard
+                alert("Admin Dashboard will open here.");
+            }, 800);
+        } else {
+            message.textContent = "Invalid admin credentials.";
+            message.className = "error";
+        }
+    });
+</script>
+
+</body>
+</html>
