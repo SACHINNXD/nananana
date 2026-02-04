@@ -15,13 +15,13 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="index.html">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="logo.png" class="logo" alt="Logo">
             </a>
         </div>
 
         <div class="nav-right">
             <!-- SEARCH -->
-            <button class="icon-btn" id="openSearch" aria-label="Search">
+            <button class="icon-btn" id="openSearch">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <circle cx="11" cy="11" r="7"></circle>
                     <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
@@ -29,7 +29,7 @@
             </button>
 
             <!-- WISHLIST -->
-            <button class="icon-btn" id="openWishlist" aria-label="Wishlist">
+            <button class="icon-btn" id="openWishlist">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <path d="M12 21s-7.5-4.7-9.5-8.5C1 9 3.2 6 6.5 6
                              8.4 6 10 7.2 12 9.3
@@ -40,7 +40,7 @@
             </button>
 
             <!-- CART -->
-            <button class="icon-btn" id="openCart" aria-label="Cart">
+            <button class="icon-btn" id="openCart">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <circle cx="9" cy="21" r="1.5"></circle>
                     <circle cx="18" cy="21" r="1.5"></circle>
@@ -48,16 +48,28 @@
                              a2 2 0 0 0 2-1.6l1.6-8.4H6.2"/>
                 </svg>
             </button>
+
+            <!-- CURRENCY SELECTOR -->
+            <div class="currency-selector">
+                <button class="currency-btn" id="currencyBtn">$</button>
+                <div class="currency-dropdown" id="currencyDropdown">
+                    <button data-currency="$">$</button>
+                    <button data-currency="₹">₹</button>
+                    <button data-currency="€">€</button>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <!-- DEMO PRICE (for testing conversion) -->
+    <main class="demo">
+        <p>Product Price:</p>
+        <p class="price" data-base-usd="100">$100</p>
+    </main>
+
     <!-- SEARCH OVERLAY -->
     <div class="search-overlay" id="searchOverlay">
-        <input
-            type="text"
-            class="overlay-search"
-            placeholder="Search..."
-        />
+        <input class="overlay-search" placeholder="Search..." />
         <button class="close-search" id="closeSearch">✕</button>
     </div>
 
@@ -79,60 +91,11 @@
         </div>
     </div>
 
-    <!-- COOKIE BANNER -->
-    <div class="cookie-banner" id="cookieBanner">
-        <p>
-            We use cookies to enhance your browsing experience, serve
-            personalized content, and analyze traffic. By clicking
-            “Accept & Proceed”, you consent to our use of cookies.
-        </p>
-
-        <div class="cookie-actions">
-            <button class="cookie-btn primary" id="acceptCookies">
-                Accept & Proceed
-            </button>
-            <button class="cookie-btn" id="rejectCookies">
-                Reject
-            </button>
-            <button class="cookie-btn" id="manageCookies">
-                Manage Cookies
-            </button>
-        </div>
-    </div>
-
-    <!-- MANAGE COOKIES MODAL -->
-    <div class="modal-overlay" id="cookieModal">
-        <div class="modal-box">
-            <button class="modal-close" id="closeCookieModal">✕</button>
-            <h2>Manage Cookie Preferences</h2>
-
-            <div class="cookie-options">
-                <label>
-                    <input type="checkbox" checked disabled />
-                    Necessary Cookies (required)
-                </label>
-
-                <label>
-                    <input type="checkbox" id="analyticsCookies" />
-                    Analytics Cookies
-                </label>
-
-                <label>
-                    <input type="checkbox" id="marketingCookies" />
-                    Marketing Cookies
-                </label>
-            </div>
-
-            <button class="cookie-btn primary" id="saveCookies">
-                Save & Accept
-            </button>
-        </div>
-    </div>
-
     <!-- SCRIPTS -->
     <script src="search.js"></script>
     <script src="wishlist.js"></script>
     <script src="cart.js"></script>
+    <script src="currency.js"></script>
     <script src="cookies.js"></script>
 
 </body>
