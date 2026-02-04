@@ -1,4 +1,4 @@
-/* RESET */
+/* ===================== RESET ===================== */
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +90,7 @@ body {
     cursor: pointer;
 }
 
-/* ===================== MODAL BASE (WISHLIST, CART, COOKIES) ===================== */
+/* ===================== MODAL BASE ===================== */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -168,13 +168,31 @@ body {
     display: flex;
 }
 
-/* ===================== DEMO PRICE (CURRENCY TEST) ===================== */
-.demo {
-    padding: 40px;
-    font-size: 20px;
+/* ===================== FOOTER ===================== */
+.site-footer {
+    margin-top: 60px;
+    padding-bottom: 20px;
 }
 
-.price {
-    font-size: 28px;
-    font-weight: bold;
+/* BLACK LINE */
+.footer-line {
+    height: 1px;
+    background: #000;
+    width: 100%;
+}
+
+/* FOOTER TEXT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 0 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* RIGHT TEXT (TRANSLUCENT) */
+.footer-right {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
 }
