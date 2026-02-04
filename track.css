@@ -1,0 +1,52 @@
+.track-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.track-box {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.track-box input {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.track-box button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ERROR */
+.track-error {
+    color: red;
+    text-align: center;
+}
+
+/* STATUS FLOW */
+.status-container {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.status-step {
+    font-size: 16px;
+    color: #999;
+}
+
+.status-arrow {
+    font-size: 22px;
+    color: #999;
+    margin: 6px 0;
+}
+
+/* COMPLETED STEPS */
+.completed {
+    color: green;
+    font-weight: 600;
+}
