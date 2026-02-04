@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Track Order</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="track.css" />
+</head>
+<body>
 
+<h1 class="track-title">Track Your Order</h1>
+
+<div class="track-box">
+    <input
+        type="text"
+        id="contactInput"
+        placeholder="Enter Mobile Number or Email ID"
+    />
+
+    <input
+        type="text"
+        id="orderInput"
+        placeholder="Enter Your Order ID"
+    />
+
+    <button id="trackBtn">Track</button>
+</div>
+
+<p class="track-error" id="trackError"></p>
+
+<!-- ORDER STATUS -->
+<div class="status-container" id="statusContainer">
+    <div class="status-step completed">Order Placed</div>
+    <div class="status-arrow completed">↓</div>
+
+    <div class="status-step completed">Order Packed</div>
+    <div class="status-arrow">↓</div>
+
+    <div class="status-step">Order Dispatched</div>
+    <div class="status-arrow">↓</div>
+
+    <div class="status-step">Order On Way</div>
+    <div class="status-arrow">↓</div>
+
+    <div class="status-step">Order Delivered</div>
+</div>
+
+<script src="tracker-data.js"></script>
+<script src="track.js"></script>
+
+</body>
+</html>
