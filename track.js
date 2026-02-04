@@ -3,6 +3,7 @@ const contactInput = document.getElementById("contactInput");
 const orderInput = document.getElementById("orderInput");
 const errorText = document.getElementById("trackError");
 const statusContainer = document.getElementById("statusContainer");
+const loader = document.getElementById("fakeLoader");
 
 trackBtn.addEventListener("click", () => {
     const contact = contactInput.value.trim();
@@ -26,6 +27,11 @@ trackBtn.addEventListener("click", () => {
         return;
     }
 
-    // MATCH FOUND
-    statusContainer.style.display = "block";
+    // SHOW LOADER FOR 2 SECONDS
+    loader.classList.remove("hide");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+        statusContainer.style.display = "block";
+    }, 2000);
 });
