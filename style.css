@@ -20,7 +20,13 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* RIGHT SIDE */
+/* LEFT */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* RIGHT */
 .nav-right {
     display: flex;
     align-items: center;
