@@ -21,7 +21,7 @@
         </div>
 
         <div class="nav-right">
-            <!-- SEARCH ICON -->
+            <!-- SEARCH -->
             <button class="icon-btn" id="openSearch" aria-label="Search">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <circle cx="11" cy="11" r="7"></circle>
@@ -29,7 +29,7 @@
                 </svg>
             </button>
 
-            <!-- WISHLIST ICON -->
+            <!-- WISHLIST -->
             <button class="icon-btn" id="openWishlist" aria-label="Wishlist">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <path d="M12 21s-7.5-4.7-9.5-8.5C1 9 3.2 6 6.5 6
@@ -40,7 +40,7 @@
                 </svg>
             </button>
 
-            <!-- CART ICON -->
+            <!-- CART -->
             <button class="icon-btn" id="openCart" aria-label="Cart">
                 <svg viewBox="0 0 24 24" class="icon-svg">
                     <circle cx="9" cy="21" r="1.5"></circle>
@@ -50,10 +50,9 @@
                 </svg>
             </button>
 
-            <!-- CURRENCY SELECTOR -->
+            <!-- CURRENCY -->
             <div class="currency-selector">
                 <button class="currency-btn" id="currencyBtn">$</button>
-
                 <div class="currency-dropdown" id="currencyDropdown">
                     <button data-currency="$">$</button>
                     <button data-currency="₹">₹</button>
@@ -65,11 +64,7 @@
 
     <!-- ===================== SEARCH OVERLAY ===================== -->
     <div class="search-overlay" id="searchOverlay">
-        <input
-            type="text"
-            class="overlay-search"
-            placeholder="Search..."
-        />
+        <input class="overlay-search" placeholder="Search..." />
         <button class="close-search" id="closeSearch">✕</button>
     </div>
 
@@ -100,15 +95,9 @@
         </p>
 
         <div class="cookie-actions">
-            <button class="cookie-btn primary" id="acceptCookies">
-                Accept & Proceed
-            </button>
-            <button class="cookie-btn" id="rejectCookies">
-                Reject
-            </button>
-            <button class="cookie-btn" id="manageCookies">
-                Manage Cookies
-            </button>
+            <button class="cookie-btn primary" id="acceptCookies">Accept & Proceed</button>
+            <button class="cookie-btn" id="rejectCookies">Reject</button>
+            <button class="cookie-btn" id="manageCookies">Manage Cookies</button>
         </div>
     </div>
 
@@ -119,37 +108,22 @@
             <h2>Manage Cookie Preferences</h2>
 
             <div class="cookie-options">
-                <label>
-                    <input type="checkbox" checked disabled />
-                    Necessary Cookies (required)
-                </label>
-
-                <label>
-                    <input type="checkbox" id="analyticsCookies" />
-                    Analytics Cookies
-                </label>
-
-                <label>
-                    <input type="checkbox" id="marketingCookies" />
-                    Marketing Cookies
-                </label>
+                <label><input type="checkbox" checked disabled /> Necessary Cookies</label>
+                <label><input type="checkbox" id="analyticsCookies" /> Analytics Cookies</label>
+                <label><input type="checkbox" id="marketingCookies" /> Marketing Cookies</label>
             </div>
 
-            <button class="cookie-btn primary" id="saveCookies">
-                Save & Accept
-            </button>
+            <button class="cookie-btn primary" id="saveCookies">Save & Accept</button>
         </div>
     </div>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="site-footer">
         <div class="footer-line"></div>
-
         <div class="footer-content">
-            <span class="footer-left">
+            <span class="footer-center">
                 © Team CR7 , All Rights Reserved
             </span>
-
             <span class="footer-right">
                 Powered By TeamCR7
             </span>
