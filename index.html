@@ -6,7 +6,6 @@
 
     <title>Cristano Ronaldo</title>
     <link rel="icon" type="image/png" href="logo.png" />
-
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,21 +13,34 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-left">
-            <a href="index.html" class="logo-link">
+            <a href="index.html">
                 <img src="logo.png" alt="Logo" class="logo" />
             </a>
         </div>
 
-        <div class="nav-center">
-            <input
-                type="text"
-                class="search-bar"
-                placeholder="Search..."
-            />
+        <div class="nav-right">
+            <!-- Search Icon (Custom) -->
+            <button class="search-icon" id="openSearch" aria-label="Open search">
+                🔍
+            </button>
         </div>
     </nav>
 
+    <!-- SEARCH POPUP -->
+    <div class="search-overlay" id="searchOverlay">
+        <input
+            type="text"
+            class="overlay-search"
+            placeholder="Search..."
+            autofocus
+        />
+        <button class="close-search" id="closeSearch" aria-label="Close search">
+            ✕
+        </button>
+    </div>
+
     <main></main>
 
+    <script src="script.js"></script>
 </body>
 </html>
