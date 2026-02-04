@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY LAYOUT (STICKY FOOTER FIX) */
+/* BODY + STICKY FOOTER */
 body {
     background: #ffffff;
     min-height: 100vh;
@@ -22,6 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
+    position: relative;
     z-index: 100;
 }
 
@@ -29,6 +30,32 @@ body {
 .logo {
     height: 44px;
     cursor: pointer;
+}
+
+/* CENTER NAV LINKS */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 26px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+.nav-link:active {
+    transform: scale(0.94);
 }
 
 /* RIGHT ICONS */
@@ -118,8 +145,8 @@ body {
     position: absolute;
     top: 12px;
     right: 12px;
-    border: none;
     background: none;
+    border: none;
     font-size: 20px;
     cursor: pointer;
 }
