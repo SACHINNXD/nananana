@@ -14,35 +14,37 @@ body {
     width: 100%;
     height: 72px;
     padding: 0 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* LOGO LINK */
-.logo-link {
+/* LEFT */
+.nav-left {
     display: flex;
     align-items: center;
-    text-decoration: none;
+}
+
+/* CENTER */
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    width: 320px;        /* medium size */
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
 }
 
 /* LOGO */
 .logo {
-    height: 44px; /* increased size */
-    cursor: pointer;
-}
-
-/* RIGHT */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-/* ICONS */
-.nav-icon {
-    width: 26px;
-    height: 26px;
+    height: 44px;
     cursor: pointer;
 }
