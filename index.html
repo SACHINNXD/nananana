@@ -19,10 +19,12 @@
         </div>
 
         <div class="nav-right">
-            <!-- CUSTOM SEARCH ICON -->
-            <button class="search-icon" id="openSearch" aria-label="Open search">
-                <span class="lens"></span>
-                <span class="handle"></span>
+            <!-- CLEAN SVG SEARCH ICON -->
+            <button class="search-btn" id="openSearch" aria-label="Search">
+                <svg viewBox="0 0 24 24" class="search-svg">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+                </svg>
             </button>
         </div>
     </nav>
@@ -33,6 +35,7 @@
             type="text"
             class="overlay-search"
             placeholder="Search..."
+            autofocus
         />
         <button class="close-search" id="closeSearch">✕</button>
     </div>
